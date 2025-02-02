@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+
+    "target": "es2021",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+
+    "paths": {
+      "#/*": ["./src/*"]
+    }
+  }
+}
