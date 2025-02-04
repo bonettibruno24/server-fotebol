@@ -7,6 +7,8 @@ import {
 import { createUserRoute } from "./routes/create-user";
 import fastifyCors from '@fastify/cors'
 import { loginUserRoute } from "./routes/create-auth-login";
+import { recoveryPasswordRoute } from "./routes/recovery-passowrd";
+import { resetPasswordRoute } from "./routes/reset-password-user";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -19,6 +21,8 @@ app.setSerializerCompiler(serializerCompiler)
 
 app.register(createUserRoute)
 app.register(loginUserRoute)
+app.register(recoveryPasswordRoute)
+app.register(resetPasswordRoute)
 
 app.listen({
   port: 3333,
